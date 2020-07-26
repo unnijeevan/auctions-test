@@ -16,6 +16,11 @@ namespace BiddingService.DataAccess
             _bidDbContext = bidDbContext;
         }
 
+        public async Task<AuctionItem> GetAsync(Guid itemId)
+        {
+            return await _bidDbContext.AuctionItems.SingleOrDefaultAsync(i => i.ItemId == itemId);
+        }
+
         public async Task<IEnumerable<AuctionItem>> GetCompletedAuctionsAsync()
         {
             return await _bidDbContext.AuctionItems.Where(a => a.EndTime <= DateTimeOffset.UtcNow

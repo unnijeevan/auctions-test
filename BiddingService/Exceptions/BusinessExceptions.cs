@@ -38,7 +38,7 @@ namespace BiddingService.Exceptions
     public class SellerCannotBidOnItem : Exception
     {
         public SellerCannotBidOnItem(Exception ex) :
-            base($"Seller cannot bid on his item", ex)
+            base($"Seller cannot bid on their item", ex)
         {
         }
     }

@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MediatR;
+using System.Reflection;
 
 namespace BiddingService
 {
@@ -22,6 +24,7 @@ namespace BiddingService
             services.AddDbConfiguration();
             services.AddControllers();
             services.AddSwaggerGen();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
