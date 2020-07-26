@@ -27,5 +27,14 @@ namespace BiddingService.DataAccess
             && !a.BuyerUserId.HasValue
             && a.Bids.Any()).ToListAsync();
         }
+
+        public async Task<AuctionItem> UpdateItemAsync(AuctionItem item)
+        {
+            var dbItem = await _bidDbContext.AuctionItems.SingleOrDefaultAsync(i => i.ItemId == item.ItemId);
+            dbItem.BuyerUserId = item.BuyerUserId;
+            _bidDbContext.Entry(dbItem).State = EntityState.Modified;
+            await _bidDbContext.SaveChangesAsync();
+            return dbItem;
+        }
     }
 }

@@ -8,5 +8,7 @@ namespace BiddingService.Domain
     {
         Task<IEnumerable<AuctionItem>> GetCompletedAuctionsAsync();
         Task<AuctionItem>  GetAsync(Guid itemId);
+        Task<AuctionItem> UpdateItemAsync(AuctionItem item);
+
     }
 }

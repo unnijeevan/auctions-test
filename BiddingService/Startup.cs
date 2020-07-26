@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MediatR;
 using System.Reflection;
+using BiddingService.SystemServices;
 
 namespace BiddingService
 {
@@ -25,6 +26,7 @@ namespace BiddingService
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddHostedService<AuctionCompleteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
