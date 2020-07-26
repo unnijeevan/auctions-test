@@ -20,14 +20,14 @@ namespace BiddingService.Init
             var dateTimeNow = DateTimeOffset.UtcNow;
             return new List<AuctionItem>()
             {
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(1), ItemId = ItemId1, MinIncrement = 5, Startprice = 20  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(12), ItemId = ItemId2, MinIncrement = 15, Startprice = 200  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(13), ItemId = ItemId3, MinIncrement = 25, Startprice = 300  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(14), ItemId = ItemId4, MinIncrement = 105, Startprice = 2000  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(15), ItemId = ItemId5, MinIncrement = 75, Startprice = 2000  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(16), ItemId = ItemId6, MinIncrement = 12, Startprice = 400 },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(17), ItemId = ItemId7, MinIncrement = 15, Startprice = 80  },
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(18), ItemId = ItemId8, MinIncrement = 5, Startprice = 20  }
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(1), ItemId = ItemId1, MinIncrement = 5, Startprice = 20, SellerUserId = 1  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(12), ItemId = ItemId2, MinIncrement = 15, Startprice = 200, SellerUserId = 2 },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(13), ItemId = ItemId3, MinIncrement = 25, Startprice = 300, SellerUserId = 3  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(14), ItemId = ItemId4, MinIncrement = 105, Startprice = 2000, SellerUserId = 4  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(15), ItemId = ItemId5, MinIncrement = 75, Startprice = 2000, SellerUserId = 1  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(16), ItemId = ItemId6, MinIncrement = 12, Startprice = 400, SellerUserId = 5 },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(17), ItemId = ItemId7, MinIncrement = 15, Startprice = 80, SellerUserId = 6  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(18), ItemId = ItemId8, MinIncrement = 5, Startprice = 20, SellerUserId = 7  }
             };
         }
        

@@ -6,6 +6,7 @@ namespace BiddingService.Domain
     public class AuctionItem
     {
         public Guid ItemId { get; set; }
+        public long SellerUserId { get; set; }
         public long? BuyerUserId { get; set; }
         public decimal Startprice { get; set; }
         public decimal  MinIncrement { get; set; }

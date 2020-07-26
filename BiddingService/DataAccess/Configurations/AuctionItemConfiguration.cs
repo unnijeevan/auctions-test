@@ -12,6 +12,7 @@ namespace BiddingService.DataAccess.Configurations
             
             builder.HasKey(p => p.ItemId);
 
+            builder.Property(p => p.SellerUserId).IsRequired();
             builder.Property(p => p.Startprice).IsRequired();
             builder.Property(p => p.EndTime).IsRequired();
             builder.Property(p => p.MinIncrement).IsRequired();

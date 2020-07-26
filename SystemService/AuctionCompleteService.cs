@@ -22,7 +22,7 @@ namespace SystemService
             _logger.LogInformation("Auction complete Service running.");
 
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(5));
+                TimeSpan.FromMinutes(5));
 
             return Task.CompletedTask;
         }
