@@ -20,7 +20,7 @@ namespace BiddingService.Init
             var dateTimeNow = DateTimeOffset.UtcNow;
             return new List<AuctionItem>()
             {
-              new AuctionItem { EndTime = dateTimeNow.AddMinutes(1), ItemId = ItemId1, MinIncrement = 5, Startprice = 20, SellerUserId = 1  },
+              new AuctionItem { EndTime = dateTimeNow.AddMinutes(4), ItemId = ItemId1, MinIncrement = 5, Startprice = 20, SellerUserId = 1  },
               new AuctionItem { EndTime = dateTimeNow.AddMinutes(12), ItemId = ItemId2, MinIncrement = 15, Startprice = 200, SellerUserId = 2 },
               new AuctionItem { EndTime = dateTimeNow.AddMinutes(13), ItemId = ItemId3, MinIncrement = 25, Startprice = 300, SellerUserId = 3  },
               new AuctionItem { EndTime = dateTimeNow.AddMinutes(14), ItemId = ItemId4, MinIncrement = 105, Startprice = 2000, SellerUserId = 4  },

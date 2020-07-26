@@ -12,6 +12,7 @@ namespace BiddingService.Exceptions
         {
         }
     }
+
     public class BiddingEndedException : Exception
     {
         public BiddingEndedException(Exception ex) :
@@ -19,6 +20,15 @@ namespace BiddingService.Exceptions
         {
         }
     }
+
+    public class BidLowerThanStartPriceException : Exception
+    {
+        public BidLowerThanStartPriceException(Exception ex) :
+            base($"The bidding amount is start price", ex)
+        {
+        }
+    }
+
     public class BidLowerThanCurrentBidException : Exception
     {
         public BidLowerThanCurrentBidException(Exception ex) :

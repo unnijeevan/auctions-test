@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using BiddingService.Commands.Requests;
 using BiddingService.Domain;
 using BiddingService.Queries.Requests;
 using MediatR;
@@ -12,20 +13,18 @@ namespace BiddingService.Controllers
     [Route("api/bidding/[controller]")]
     public class BidController : ControllerBase
     {
-        private readonly IBidRepository _bidRepository;
         private readonly IMediator _mediator;
 
-        public BidController(IBidRepository bidRepository, IMediator mediator)
+        public BidController(IMediator mediator)
         {
-            _bidRepository = bidRepository;
             _mediator = mediator;
         }
 
         [HttpPost]
         [Route("place-bid")]
-        public async Task<IActionResult> PlaceBid([FromBody]Bid bid)
+        public async Task<IActionResult> PlaceBid([FromBody]PlaceBidCommand bidCommand)
         {
-            var result = await _bidRepository.AddAsync(bid);
+            var result = await _mediator.Send(bidCommand);
             return Ok(result);
         }
 

@@ -25,7 +25,6 @@ namespace BiddingService.Test
             _bidRepository = new Mock<IBidRepository>();
             _auctionItemRepository = new Mock<IAuctionItemRepository>();
             _getCurrentBidHandler = new GetCurrentBidHandler(_bidRepository.Object, _auctionItemRepository.Object);
-
         }
 
         [Fact]
