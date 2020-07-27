@@ -43,12 +43,10 @@ namespace BiddingService
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-                app.UseSeedData();
+                app.UseDeveloperExceptionPage();                
             }
 
-            app.UseHttpsRedirection();
-
+            app.UseSeedData();
             app.UseRouting();
 
             app.UseAuthorization();

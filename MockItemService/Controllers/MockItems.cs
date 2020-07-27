@@ -23,7 +23,7 @@ namespace MockItemService.Controllers
             return new List<Item>()
             {
               new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(4),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id1,
                   MinIncrement = 5,
@@ -33,7 +33,7 @@ namespace MockItemService.Controllers
                   Description ="Medium Resistance training Kit Description"
               },
                  new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(12),
                   StartTime = dateTimeNow.AddHours(-2),
                   Id = Id2,
                   MinIncrement = 15,
@@ -43,7 +43,7 @@ namespace MockItemService.Controllers
                   Description ="Action Camera High Definition description"
               },
                     new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(13),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id3,
                   MinIncrement = 25,
@@ -53,7 +53,7 @@ namespace MockItemService.Controllers
                   Description ="18 Megapixel Digital Camera description"
               },
                        new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(14),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id4,
                   MinIncrement = 105,
@@ -63,7 +63,7 @@ namespace MockItemService.Controllers
                   Description ="Gaming Headset description"
               },
                           new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(15),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id5,
                   MinIncrement = 75,
@@ -73,7 +73,7 @@ namespace MockItemService.Controllers
                   Description ="Apple & Cinamon Muffin Description"
               },
                              new Item {
-                  EndTime = dateTimeNow.AddMinutes(1),
+                  EndTime = dateTimeNow.AddMinutes(16),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id6,
                   MinIncrement = 12,
@@ -83,7 +83,7 @@ namespace MockItemService.Controllers
                   Description ="70cm Hard case description"
               },
                                 new Item {
-                  EndTime = dateTimeNow.AddMinutes(7),
+                  EndTime = dateTimeNow.AddMinutes(17),
                   StartTime = dateTimeNow.AddHours(-1),
                   Id = Id7,
                   MinIncrement = 15,
@@ -93,7 +93,7 @@ namespace MockItemService.Controllers
                   Description ="Hand Vaccum Description"
               },
                                    new Item {
-                  EndTime = dateTimeNow.AddMinutes(11),
+                  EndTime = dateTimeNow.AddMinutes(18),
                   StartTime = dateTimeNow.AddHours(-9),
                   Id = Id8,
                   MinIncrement = 5,
