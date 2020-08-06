@@ -2,49 +2,39 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/Items/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44376
+          "Host": "itemsservice",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/Items/{everything}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "Get" ]
     },
     {
       "DownstreamPathTemplate": "/api/Bidding/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44315
+          "Host": "biddingservice",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/Bidding/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post" ]
-    }
-  ],
-  "SwaggerEndPoints": [
-    {
-      "Key": "items",
-      "Config": [
-        {
-          "Name": "Items API",
-          "Version": "v1",
-          "Url": "http://localhost:44376"
-        }
-      ]
     },
     {
-      "Key": "Bidding",
-      "Config": [
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
         {
-          "Name": "Bidding API",
-          "Version": "v1",
-          "Url": "http://localhost:44315"
+          "Host": "spa",
+          "Port": 80
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
     }
   ],
   "Logging": {

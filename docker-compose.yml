@@ -1,0 +1,44 @@
+version: "3.6"
+services:   
+    itemsservice:
+        container_name: itemsservice
+        ports:
+            - 8000:80
+        environment:
+            - "ASPNETCORE_URLS=http://+"
+        build:
+            context: ./MockItemService
+        restart: on-failure
+
+    biddingservice:
+        container_name: biddingservice
+        ports:
+            - 9000:80
+        environment:
+            - "ASPNETCORE_URLS=http://+"
+        build:
+            context: ./BiddingService     
+        restart: on-failure       
+
+    spa:
+        container_name: spa
+        ports:
+            - 7000:80
+        environment:
+            - "ASPNETCORE_URLS=http://+"
+        build:
+            context: ./SPA     
+        restart: on-failure    
+
+    apigateway:
+        container_name: apigateway
+        ports:
+            - 5000:80
+        environment:
+            - "ASPNETCORE_URLS=http://+"
+        build:
+            context: ./APIGateway     
+        restart: on-failure
+        depends_on:
+            - itemsservice
+            - biddingservice

@@ -14,6 +14,8 @@ Initially I planned to mock all other services and add a front end but i have al
 3. Goto  https://localhost:44315/ for swagger documentation. A bid can be placed using the api end point from swagger. Use item id from the seed data in /Init/SeedData . if testing of auction complete is also required , select one with faster end time. Exceute.
 4. Watch the logs for Auction complete service. I am logging the itemId and selling price 
 
+If you have docker for desktop installed , optionally you can checkout / download this branch https://github.com/unnijeevan/auctions-test/tree/DockerSupport.  Run docker-compose up from root. There is a single page app at http://localhost:5000/index.html which does basic things like showing list of items and placing a bid on it . Very primitive at the moment . Also since docker will run all services , swagger for bidding service can be accessed at localhost:9000 and the same placing bid, getting current bids can be done
+
 # Note
 
 I haven't done the cleanup to remove incomplete services because I would like to come back later and complete the other microservices later as a sample application.
